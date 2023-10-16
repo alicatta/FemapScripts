@@ -7,7 +7,7 @@ from matplotlib.ticker import MultipleLocator, FormatStrFormatter
 import tkinter as tk
 from tkinter import filedialog, simpledialog
 import re
-
+import sestoolkit.array.timeseries as ts
 
 
 # Global Constants
@@ -49,6 +49,7 @@ def calculate_max_fft_from_weld_output(weld_output_filepath):
     df /= 1e9
     
     all_fftAmp = [perform_fft(highpass_filter(row.values, 0.5, FS))[1] for _, row in df.iterrows()]
+    all_fftAmp = [ts.fft(highpass_filter(row.values, 0.5, FS))[1] for _, row in df.iterrows()]
     max_fftAmp = np.max(all_fftAmp, axis=0)
 
     return perform_fft(df.iloc[0].values)[0], max_fftAmp  # Frequency remains the same for all rows

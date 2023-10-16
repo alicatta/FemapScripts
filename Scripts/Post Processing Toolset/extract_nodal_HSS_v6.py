@@ -403,7 +403,7 @@ if __name__ == "__main__":
 
     time_step, length, start_set = get_user_inputs(prompts, initialvalues, datatypes)
     #time step in seconds
-    #time_step = 0.002
+    #time_step = 0.002understanding of what I can help you with from a technica
     #time_step = get_user_input("Timestep for analysis", 0.002, "float" )
     #total time in seconds
     #length = 18
