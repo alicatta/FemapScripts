@@ -1,0 +1,1 @@
+When running a Femap API python script you must ensure that your PyFemap library is compiled from the correct version of Femap. I have provided two versions, 2022.1 and 2301. Add the appropriate version to your python lib folder and rename to PyFemap.
